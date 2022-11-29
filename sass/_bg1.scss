@@ -1,0 +1,14 @@
+.pic-bg{
+    position: relative;
+    .bg1-content{
+        position:absolute;
+        top: 20%;
+        left: 45%;
+        p{
+            font-size: 70px;
+            line-height: 30px;
+            font-weight: bold;
+            color: #fff;
+        }   
+    }
+}
