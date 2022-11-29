@@ -1,0 +1,32 @@
+.bgShoping{
+    position: relative;
+    .search{
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        left: 30%;
+        input{
+            padding: 20px;
+            width: 40%;
+            border: none;
+            border-radius: 20px;
+        }
+        i{  
+            position: absolute;
+            background: white;
+            padding: 14px;
+            border-radius: 20px;
+            top: 5%;
+            left: 35%;
+        }
+
+    }
+}
+.product{
+   .img{
+    img{
+        width: 200px;
+        height: 200px;
+    }
+   }
+}

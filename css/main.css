@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+.container {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -65,10 +68,11 @@ nav .nav-right img {
   background: rgb(216, 185, 226);
   border-radius: 10px;
   padding: 20px;
+  width: 20%;
 }
-.product .show-product .card-product .information .img {
+.product .show-product .card-product .img {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 .product .show-product .card-product .information .name-price {
   display: flex;
@@ -94,4 +98,33 @@ nav .nav-right img {
   width: 70px;
   border-radius: 10px;
   color: white;
+}
+
+.bgShoping {
+  position: relative;
+}
+.bgShoping .search {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  left: 30%;
+}
+.bgShoping .search input {
+  padding: 20px;
+  width: 40%;
+  border: none;
+  border-radius: 20px;
+}
+.bgShoping .search i {
+  position: absolute;
+  background: white;
+  padding: 14px;
+  border-radius: 20px;
+  top: 5%;
+  left: 35%;
+}
+
+.product .img img {
+  width: 200px;
+  height: 200px;
 }/*# sourceMappingURL=main.css.map */
