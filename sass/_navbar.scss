@@ -16,6 +16,13 @@ nav{
         display: flex;
         ul{
             display: flex;
+            a{
+                text-decoration: none;
+                color:black;
+                &:hover{
+                    color:purple;
+                }
+            }
             li{
                 margin: {
                     left: 20px;
@@ -24,6 +31,7 @@ nav{
                 };
                 font-size: 20px;
                 list-style: none;
+                
             }
         }
         img{

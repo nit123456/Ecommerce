@@ -1,0 +1,50 @@
+.product{
+    h2{
+        text-align: center;
+    }
+    .show-product{
+        display: flex;
+        padding: 50px;
+        gap: 30px;
+        // justify-content:space-evenly;
+        .card-product{
+            background:rgb(216, 185, 226);
+            border-radius: 10px;
+            padding: 20px;
+        .information{
+            .img{
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+            }
+            .name-price{
+                display: flex;
+                justify-content: space-between;
+                font-size: 20px;
+                line-height: 0px;
+            }
+            .star-rating{
+                display: flex;
+                line-height: 5px;
+                p{
+                    font-size: 30px;
+                }
+                
+            }
+            .button{
+                display: flex;
+                justify-content:space-between;
+                button{
+                    background: rgb(130, 5, 149);
+                    border: none;
+                    padding: 10px;
+                    width: 70px;
+                    border-radius: 10px;
+                    color: white;
+                }
+            }
+        }
+        }
+    }
+    
+}
