@@ -1,10 +1,14 @@
 .product{
+    margin-top: 5%;
     h2{
-        text-align: center;
+        margin-left: 4%;
     }
     .show-product{
         display: flex;
-        padding: 50px;
+        padding: {
+            left: 50px;
+            right: 50px;
+        };
         gap: 30px;
         // justify-content:space-evenly;
         .card-product{

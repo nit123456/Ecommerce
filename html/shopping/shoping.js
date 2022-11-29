@@ -14,6 +14,7 @@ let product=[{img:"https://spng.pngfind.com/pngs/s/592-5924959_1680d-laptop-back
             {img:"https://freepngimg.com/thumb/jacket/152511-leather-jacket-biker-png-file-hd.png",
              name:"BARROW",price:249,detail:"drawstring-hem padded jacket",star:5}];
 
+// ________________Display Product___________________
 let displayProduct=()=>{
     let showProduct=document.createElement("div");
     showProduct.className="show-product";
@@ -21,6 +22,8 @@ let displayProduct=()=>{
         // ________Create Element___________
         let cardProduct= document.createElement("div");
         cardProduct.className="card-product";
+        cardProduct.dataset.index = index;
+        console.log(cardProduct);
 
         let image= document.createElement("div");
         image.className="img";
@@ -76,6 +79,18 @@ let displayProduct=()=>{
     }
     classProduct.appendChild(showProduct);
     
+};
+// _______________Save Product_______________________
+let saveProduct=()=>{
+    localStorage.setItem("product", JSON.stringify(product));
+}
+
+// _______________Reload Product_______________
+let reloadProduct=()=>{
+    let storeProduct= JSON.parse(localStorage.getItem("product"));
+    if (saveProduct !==null){
+        product=storeProduct;
+    }
 }
 // ________Variable Const________
 const searchProductInput= document.querySelector("#search");
@@ -99,5 +114,5 @@ let searchProduct =()=>{
 }
 // _______AddeventListener to searchProductInput____________
 searchProductInput.addEventListener("keyup", searchProduct)
-
+saveProduct()
 displayProduct()

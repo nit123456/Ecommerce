@@ -13,10 +13,11 @@ nav {
   justify-content: space-between;
 }
 nav .nav-left img {
-  margin-left: 20px;
+  margin-left: 50px;
 }
 nav .nav-right {
   display: flex;
+  margin-right: 50px;
 }
 nav .nav-right ul {
   display: flex;
@@ -56,12 +57,16 @@ nav .nav-right img {
   color: #fff;
 }
 
+.product {
+  margin-top: 5%;
+}
 .product h2 {
-  text-align: center;
+  margin-left: 4%;
 }
 .product .show-product {
   display: flex;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   gap: 30px;
 }
 .product .show-product .card-product {
@@ -127,4 +132,9 @@ nav .nav-right img {
 .product .img img {
   width: 200px;
   height: 200px;
+}
+
+.card-cart {
+  background: rgb(243, 176, 243);
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

@@ -12,11 +12,12 @@ nav{
     justify-content:space-between ;
     .nav-left{
         img{
-            margin-left: 20px;
+            margin-left: 50px;
         }
     }
     .nav-right{
         display: flex;
+        margin-right: 50px;
         ul{
             display: flex;
             a{
@@ -50,3 +51,4 @@ nav{
 @import"bg1.scss";
 @import"product.scss";
 @import"bgShoping.scss";
+@import"cart.scss";
