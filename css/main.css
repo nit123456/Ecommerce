@@ -190,4 +190,58 @@ nav .nav-right img {
   color: red;
   font-size: 30px;
   margin-bottom: 10px;
+}
+
+.container-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 20px;
+}
+.container-card table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+  box-shadow: 0px 0px 20px gray;
+}
+.container-card table thead tr:nth-child(1) {
+  background-color: rgb(244, 171, 229);
+}
+.container-card table th, .container-card table td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+.container-card table th img, .container-card table td img {
+  width: 150px;
+}
+.container-card table th i, .container-card table td i {
+  font-size: 30px;
+}
+.container-card table th i:nth-child(1), .container-card table td i:nth-child(1) {
+  margin-right: 10px;
+  margin-left: -10px;
+  color: blue;
+}
+.container-card table th i:nth-child(2), .container-card table td i:nth-child(2) {
+  margin-left: 10px;
+  margin-right: -10px;
+  color: red;
+}
+.container-card .btn-add {
+  text-align: end;
+  padding: 10px;
+}
+.container-card .btn-add button {
+  padding: 10px;
+  background: purple;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.container-card .btn-add button:hover {
+  color: black;
+  background-color: rgb(244, 171, 229);
 }/*# sourceMappingURL=main.css.map */
