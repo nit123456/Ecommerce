@@ -1,5 +1,8 @@
+// ______________________Shoping Page____________________________
 .bgShoping{
+    margin-top: 1%;
     position: relative;
+    overflow-x: hidden;
     .search{
         position: absolute;
         width: 100%;
@@ -25,8 +28,19 @@
 .product{
    .img{
     img{
-        width: 200px;
+        width: 170px;
         height: 200px;
     }
+   }
+   .star-rating{
+    i{
+        line-height: 40px;
+        margin: {
+            left: 5px;
+        };
+    }
+   }
+   button{
+    line-height: 20px;
    }
 }

@@ -4,15 +4,23 @@ const classProduct= document.querySelector(".product");
 
 
 // __________Create Variable___________
-
 let product=[{img:"https://spng.pngfind.com/pngs/s/592-5924959_1680d-laptop-backpack-backpack-hd-png-download.png",
-              name:"DENY",price:200,detail:"quilted leather crossbody bag",star:5},
+              name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX"},
             {img:"https://www.pngfind.com/pngs/m/541-5412120_college-bag-hawlander-backpack-hd-png-download.png",
-              name:"Chanel Pre-Owned",price:12403,detail:"2021-2022 Coco top-handle bag",star:5},
+              name:"Chanel Pre-Owned",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX"},
             {img:"https://www.pngmart.com/files/6/Shoe-PNG-HD.png",
-              name:"Nike",price:213,detail:"Dunk Low Retro sneakers",star:5},
+              name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX"},
             {img:"https://freepngimg.com/thumb/jacket/152511-leather-jacket-biker-png-file-hd.png",
-             name:"BARROW",price:249,detail:"drawstring-hem padded jacket",star:5}];
+             name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX"},
+             {img:"https://spng.pngfind.com/pngs/s/592-5924959_1680d-laptop-backpack-backpack-hd-png-download.png",
+             name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX"},
+           {img:"https://www.pngfind.com/pngs/m/541-5412120_college-bag-hawlander-backpack-hd-png-download.png",
+             name:"Chanel Pre-Owned",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX"},
+           {img:"https://www.pngmart.com/files/6/Shoe-PNG-HD.png",
+             name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX"},
+           {img:"https://freepngimg.com/thumb/jacket/152511-leather-jacket-biker-png-file-hd.png",
+            name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX"}];
+let cart=[];
 
 // ________________Display Product___________________
 let displayProduct=()=>{
@@ -67,6 +75,7 @@ let displayProduct=()=>{
 
         let button2=document.createElement("button");
         button2.textContent="Cart";
+        button2.addEventListener("click", addCart)
         classButton.appendChild(button2);
         // ___________Append Child___________
         information.appendChild(nameAndPrice);
@@ -80,17 +89,44 @@ let displayProduct=()=>{
     classProduct.appendChild(showProduct);
     
 };
+// _______________Function add cart_____________
+let addCart=(event)=>{
+    let newCart={};
+    let index= event.target.parentElement.parentElement.parentElement.dataset.index;
+    newCart.img=product[index].img;
+    newCart.name=product[index].name;
+    newCart.price=product[index].price;
+    newCart.description=product[index].description;
+    newCart.size=product[index].size;
+    cart.push(newCart)
+
+    saveCart()
+
+}
 // _______________Save Product_______________________
 let saveProduct=()=>{
     localStorage.setItem("product", JSON.stringify(product));
+    // localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+let saveCart=()=>{
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
 // _______________Reload Product_______________
 let reloadProduct=()=>{
     let storeProduct= JSON.parse(localStorage.getItem("product"));
-    if (saveProduct !==null){
+    let storeCart= JSON.parse(localStorage.getItem("cart"));
+    if (storeProduct !==null){
         product=storeProduct;
     }
+    if (storeCart!==null){
+        cart=storeCart;
+    }
+
+};
+// ______________Function Of Product Carted___________________
+let productCarted=()=>{
+
 }
 // ________Variable Const________
 const searchProductInput= document.querySelector("#search");
@@ -104,7 +140,7 @@ let searchProduct =()=>{
     // _______Loop on all class card-product________
     let allCardProduct = document.querySelectorAll(".card-product");
     for(let i=0;i<allCardProduct.length;i++){
-        let card= allCardProduct[i].lastElementChild.firstElementChild.firstElementChild.textContent;
+        let card= allCardProduct[i].lastElementChild.firstElementChild.firstElementChild.textContent.toLocaleUpperCase();
         if (card.indexOf(nameProduct)>-1){
             allCardProduct[i].style.display="";
         }else{
@@ -113,6 +149,8 @@ let searchProduct =()=>{
     }
 }
 // _______AddeventListener to searchProductInput____________
-searchProductInput.addEventListener("keyup", searchProduct)
-saveProduct()
+searchProductInput.addEventListener("keyup", searchProduct);
+
+// saveProduct()
+reloadProduct()
 displayProduct()
