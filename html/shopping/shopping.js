@@ -2,7 +2,6 @@
 // _________CONTANT___________
 const classProduct= document.querySelector(".product");
 
-
 // __________Create Variable___________
 let product=[{img:"https://spng.pngfind.com/pngs/s/592-5924959_1680d-laptop-backpack-backpack-hd-png-download.png",
               name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$",},
@@ -31,7 +30,6 @@ let displayProduct=()=>{
         let cardProduct= document.createElement("div");
         cardProduct.className="card-product";
         cardProduct.dataset.index = index;
-        console.log(cardProduct);
 
         let image= document.createElement("div");
         image.className="img";
@@ -71,6 +69,7 @@ let displayProduct=()=>{
 
         let button1=document.createElement("button");
         button1.textContent="Details";
+        button1.addEventListener("click",detailInfo);
         classButton.appendChild(button1);
 
         let button2=document.createElement("button");
@@ -89,6 +88,12 @@ let displayProduct=()=>{
     classProduct.appendChild(showProduct);
     
 };
+// ___________________Details information__________________
+let detailInfo=(event)=>{
+    let index =event.target.parentElement.parentElement.parentElement.dataset.index;
+    document.querySelector(".img-left img").src=product[index].img;
+    
+}
 // _______________Function add cart_____________
 let addCart=(event)=>{
     let newCart={};
