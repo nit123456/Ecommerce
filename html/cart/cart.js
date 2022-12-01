@@ -3,18 +3,9 @@ const myCart= document.querySelector(".all-cart");
 
 
 // ____________Variables__________________
-// let getCarted= JSON.parse(localStorage.getItem("cart"));
-// console.log(getCarted)
 let cart=JSON.parse(localStorage.getItem("cart"));
 
-// let reloadCart=()=>{
-//     let storeCart= JSON.parse(localStorage.getItem("cart"));
-//     if (storeCart!==null){
-//         cart=storeCart;
-//     }
-// };
-
-
+// ______________Save______________________
 let saveCart=()=>{
     localStorage.setItem("cart",JSON.stringify(cart));
 }
@@ -93,7 +84,7 @@ let customerCard =()=>{
 // ________________Function Remove cart______________
 let deleteCart=(event)=>{
     let index=event.target.parentElement.parentElement.parentElement.dataset.index;
-    console.log(index)
+    // console.log(index)
     cart.splice(index, 1);
 
     saveCart();

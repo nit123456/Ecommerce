@@ -16,7 +16,7 @@ let product=[{img:"https://spng.pngfind.com/pngs/s/592-5924959_1680d-laptop-back
              name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX"},
            {img:"https://www.pngfind.com/pngs/m/541-5412120_college-bag-hawlander-backpack-hd-png-download.png",
              name:"Chanel Pre-Owned",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX"},
-           {img:"https://www.pngmart.com/files/6/Shoe-PNG-HD.png",
+           {img:"https://www.freepngimg.com/thumb/bag/130700-bag-school-black-download-hd.png",
              name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX"},
            {img:"https://freepngimg.com/thumb/jacket/152511-leather-jacket-biker-png-file-hd.png",
             name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX"}];
