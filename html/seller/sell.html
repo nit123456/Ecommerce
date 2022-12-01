@@ -38,24 +38,60 @@
                         <th>DESCRIPTION</th>
                         <th>SIZE</th>
                         <th>PRICE</th>
+                        <th><button id="btn">ADD PRODUCT</button></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr>
-                        <td><img src="/project pic/Bag-PNG-Pic.png"></td>
-                        <td>sssssssssssssssssssssss</td>
-                        <td>xxxxxx</td>
-                        <td>$000000</td>
-                        <td>
-                            <i class="fa fa-edit"></i>
-                            <i class="fa fa-trash"></i>
-                        </td>
-                    </tr> -->
+                <!-- TODO -->
                 </tbody>
             </table>
-            <div class="btn-add">
-                <button>ADD Product</button>
-            </div>
+        </div>
+        <div class="add-product" style="display: none;">
+            <dialog open>
+                <div class="title">
+                    <h3>ADD PRODUCT</h3>
+                </div>
+                <div class="input-info">
+                    <label>Image</label>
+                    <input id="img" type="text" placeholder="link of image">
+                </div>
+                <div class="input-info">
+                    <label>Name</label>
+                    <input id="name" type="text" placeholder="name">
+                </div>
+                <div class="input-info">
+                    <label>Description</label>
+                    <textarea name="" id="description" cols="25" rows="5"></textarea>
+                </div>
+                <div class="input-info">
+                    <label>Size</label>
+                    <select name="select" id="size">
+                        <option disabled selected>Chose</option>
+                        <option value="SM">SM</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">X</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+                <div class="input-info">
+                    <label>Price</label>
+                    <input id="price" type="number" placeholder="">
+                </div>
+                <div class="input-info">
+                    <label>Currency</label>
+                    <select name="select" id="currency">
+                        <option disabled selected>Chose</option>
+                        <option value="$">USD</option>
+                        <option value="KHM">KHM</option>
+                    </select>
+                </div>
+                <div class="btn-add2">
+                    <button>CANCEL</button>
+                    <button>CREATE</button>
+                </div>
+            </dialog>
         </div>
     </div>
 </body>

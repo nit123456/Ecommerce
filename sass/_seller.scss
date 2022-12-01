@@ -16,6 +16,17 @@
             tr:nth-child(1){
                 background-color: rgb(244, 171, 229);
             }
+            button{
+                padding: 10px;
+                background: purple;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                &:hover{
+                    color: black;
+                    background-color: rgb(244, 171, 229);
+                }
+            }
         }
         th,td{
             border: 1px solid black;
@@ -39,20 +50,4 @@
             }
         }
     }
-   .btn-add{
-        text-align: end;
-        padding: 10px;
-        button{
-            padding: 10px;
-            background: purple;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            &:hover{
-                color: black;
-                background-color: rgb(244, 171, 229);
-            }
-        }
-
-   }
 }

@@ -5,21 +5,21 @@ const classProduct= document.querySelector(".product");
 
 // __________Create Variable___________
 let product=[{img:"https://spng.pngfind.com/pngs/s/592-5924959_1680d-laptop-backpack-backpack-hd-png-download.png",
-              name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX"},
+              name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$",},
             {img:"https://www.pngfind.com/pngs/m/541-5412120_college-bag-hawlander-backpack-hd-png-download.png",
-              name:"Chanel Pre-Owned",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX"},
+              name:"Chanel",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
             {img:"https://freepngimg.com/thumb/women_shoes/3-2-women-shoes-free-download-png.png",
-              name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX"},
-            {img:"https://freepngimg.com/thumb/jacket/152511-leather-jacket-biker-png-file-hd.png",
-             name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX"},
-             {img:"https://spng.pngfind.com/pngs/s/592-5924959_1680d-laptop-backpack-backpack-hd-png-download.png",
-             name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX"},
+              name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
+            {img:"https://www.freepnglogos.com/uploads/shoes-png/download-nike-shoes-transparent-png-for-designing-projects-16.png",
+             name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"},
+             {img:"https://www.freepnglogos.com/uploads/shoes-png/dance-shoes-png-transparent-dance-shoes-images-36.png",
+             name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$"},
            {img:"https://www.pngfind.com/pngs/m/541-5412120_college-bag-hawlander-backpack-hd-png-download.png",
-             name:"Chanel Pre-Owned",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX"},
+             name:"Chanel",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
            {img:"https://www.freepngimg.com/thumb/bag/130700-bag-school-black-download-hd.png",
-             name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX"},
+             name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
            {img:"https://freepngimg.com/thumb/jacket/152511-leather-jacket-biker-png-file-hd.png",
-            name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX"}];
+            name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"}];
 let cart=[];
 
 // ________________Display Product___________________
@@ -39,7 +39,7 @@ let displayProduct=()=>{
         let img= document.createElement("img");
         img.src=product[index]["img"];
         image.appendChild(img);
-        console.log(image);
+        // console.log(image);
 
         let information=document.createElement("div");
         information.className="information";
@@ -51,7 +51,7 @@ let displayProduct=()=>{
         p1.textContent=product[index]["name"];
 
         let p2=document.createElement("p");
-        p2.textContent="$"+product[index]["price"];
+        p2.textContent=product[index].currency+product[index]["price"];
 
         nameAndPrice.appendChild(p1);
         nameAndPrice.appendChild(p2);
@@ -135,7 +135,7 @@ const showProduct = document.querySelector(".show-product");
 // ___________Function for searchProduct__________
 let searchProduct =()=>{
     let nameProduct= searchProductInput.value.toUpperCase();
-    console.log(nameProduct);
+    // console.log(nameProduct);
     
     // _______Loop on all class card-product________
     let allCardProduct = document.querySelectorAll(".card-product");

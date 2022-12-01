@@ -209,6 +209,17 @@ nav .nav-right img {
 .container-card table thead tr:nth-child(1) {
   background-color: rgb(244, 171, 229);
 }
+.container-card table thead button {
+  padding: 10px;
+  background: purple;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.container-card table thead button:hover {
+  color: black;
+  background-color: rgb(244, 171, 229);
+}
 .container-card table th, .container-card table td {
   border: 1px solid black;
   padding: 10px;
@@ -230,18 +241,78 @@ nav .nav-right img {
   margin-right: -10px;
   color: red;
 }
-.container-card .btn-add {
-  text-align: end;
-  padding: 10px;
+
+.add-product {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
 }
-.container-card .btn-add button {
+
+dialog {
+  background: rgb(243, 176, 243);
+  width: 40%;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  margin-top: 2%;
+}
+dialog .title {
+  background: white;
+  text-align: center;
+  padding: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+dialog .input-info {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+dialog .input-info label {
+  margin-bottom: 5px;
+}
+dialog .input-info select {
+  padding: 7px;
+  width: 100%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+dialog .input-info input {
+  width: 97%;
+  padding: 7px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+dialog .btn-add2 {
+  text-align: end;
+  padding: 15px;
+  padding-bottom: 30px;
+  margin-right: 7%;
+}
+dialog .btn-add2 button {
   padding: 10px;
-  background: purple;
-  color: white;
   border: none;
   border-radius: 10px;
+  outline: none;
 }
-.container-card .btn-add button:hover {
+dialog .btn-add2 button:nth-child(1):hover {
+  background: purple;
+  color: white;
+}
+dialog .btn-add2 button:nth-child(2) {
+  background: purple;
+  color: white;
+}
+dialog .btn-add2 button:nth-child(2):hover {
+  background: white;
   color: black;
-  background-color: rgb(244, 171, 229);
 }/*# sourceMappingURL=main.css.map */
