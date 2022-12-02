@@ -1,3 +1,4 @@
+@import"variable.scss";
 body{
     margin: 0;
     padding: 0;
@@ -28,7 +29,7 @@ nav{
                 text-decoration: none;
                 color:black;
                 &:hover{
-                    color:purple;
+                    color:$color2;
                 }
             }
             li{
@@ -52,9 +53,11 @@ nav{
         
     }
 }
+
 @import"bg1.scss";
 @import"product.scss";
 @import"bgShoping.scss";
 @import"cart.scss";
 @import"seller.scss";
 @import"addproduct.scss";
+@import"footer.scss";

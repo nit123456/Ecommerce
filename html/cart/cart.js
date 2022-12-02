@@ -1,5 +1,6 @@
 // ----------------------Cart Page----------------------//
 const myCart= document.querySelector(".all-cart");
+const fileEmpty=document.querySelector(".file-empty");
 
 
 // ____________Variables__________________
@@ -9,6 +10,16 @@ let cart=JSON.parse(localStorage.getItem("cart"));
 let saveCart=()=>{
     localStorage.setItem("cart",JSON.stringify(cart));
 }
+// ____________________Price & Item____________________
+let price=0;
+let item=0;
+for (value of cart){
+    price+=value.price;
+    item+=1;
+};
+document.querySelector("#total").textContent="$"+price;
+document.querySelector("#item").textContent=item;
+
 // ___________Function carted___________
 let customerCard =()=>{
     // _________________Ceate Element__________________
@@ -71,14 +82,11 @@ let customerCard =()=>{
             myCart.appendChild(cardCart);
         }
     }
-    else{
-        let fileEmpty = document.createElement("div");
-        fileEmpty.className="file-empty";
+    if (cart.length==0){
         let text=document.createElement("p");
         text.textContent="Your Cart is Empty";
 
         fileEmpty.appendChild(text);
-        myCart.appendChild(fileEmpty);
     }
 }
 // ________________Function Remove cart______________

@@ -29,7 +29,7 @@ nav .nav-right ul a {
   color: black;
 }
 nav .nav-right ul a:hover {
-  color: purple;
+  color: rgb(239, 35, 69);
 }
 nav .nav-right ul li {
   margin-left: 20px;
@@ -76,14 +76,18 @@ nav .nav-right img {
   flex-wrap: wrap;
 }
 .product .show-product .card-product {
-  background: rgb(244, 163, 224);
+  background: rgb(207, 205, 189);
   border-radius: 10px;
   padding: 20px;
   width: 18%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.724);
 }
 .product .show-product .card-product .img {
   display: flex;
   justify-content: center;
+}
+.product .show-product .card-product .information {
+  margin-top: 15px;
 }
 .product .show-product .card-product .information .name-price {
   display: flex;
@@ -93,7 +97,7 @@ nav .nav-right img {
 }
 .product .show-product .card-product .information .star-rating {
   display: flex;
-  line-height: 5px;
+  margin-bottom: 5px;
 }
 .product .show-product .card-product .information .star-rating p {
   font-size: 30px;
@@ -102,8 +106,13 @@ nav .nav-right img {
   display: flex;
   justify-content: space-between;
 }
+.product .show-product .card-product .information .button button:nth-child(1) {
+  background: white;
+  border: 1px solid black;
+  color: black;
+}
 .product .show-product .card-product .information .button button {
-  background: rgb(130, 5, 149);
+  background: rgb(239, 35, 69);
   border: none;
   padding: 10px;
   width: 70px;
@@ -149,8 +158,71 @@ nav .nav-right img {
   line-height: 20px;
 }
 
-.my-cart {
-  padding: 0 20px;
+.container-detail {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+.container-detail dialog {
+  background: rgb(207, 205, 189);
+  width: 50%;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  margin-top: 8%;
+  display: flex;
+}
+.container-detail dialog .img-left {
+  background: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-detail dialog .info-right {
+  margin-left: 10%;
+}
+.container-detail dialog .info-right h4 {
+  margin-right: 10px;
+}
+.container-detail dialog .back {
+  text-align: end;
+}
+.container-detail dialog .back button {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  width: 70px;
+  border-radius: 10px;
+}
+.container-detail dialog .back button:hover {
+  background: rgb(239, 35, 69);
+  color: white;
+}
+
+.my-cart .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(239, 35, 69);
+  padding: 7px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: white;
+}
+.my-cart .total h1 {
+  margin-left: 20px;
+}
+.my-cart .total p {
+  margin-right: 20px;
+}
+.my-cart .total p span {
+  margin-left: 10px;
 }
 
 .all-cart {
@@ -161,11 +233,12 @@ nav .nav-right img {
 
 .card-cart {
   width: 49%;
-  background: rgb(243, 176, 243);
+  background: rgb(207, 205, 189);
   display: flex;
   align-items: center;
   border-radius: 10px;
   margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.599);
 }
 .card-cart .left {
   margin-left: 5%;
@@ -192,6 +265,15 @@ nav .nav-right img {
   margin-bottom: 10px;
 }
 
+.file-empty {
+  text-align: center;
+  margin-top: 10%;
+}
+.file-empty p {
+  font-size: 50px;
+  color: rgba(136, 129, 129, 0.567);
+}
+
 .container-card {
   width: 90%;
   display: flex;
@@ -207,18 +289,19 @@ nav .nav-right img {
   box-shadow: 0px 0px 20px gray;
 }
 .container-card table thead tr:nth-child(1) {
-  background-color: rgb(244, 171, 229);
+  background-color: rgb(239, 35, 69);
+  color: white;
 }
 .container-card table thead button {
   padding: 10px;
-  background: purple;
+  background: rgb(239, 35, 69);
   color: white;
   border: none;
   border-radius: 10px;
 }
 .container-card table thead button:hover {
   color: black;
-  background-color: rgb(244, 171, 229);
+  background-color: rgb(207, 205, 189);
 }
 .container-card table th, .container-card table td {
   border: 1px solid black;
@@ -253,7 +336,7 @@ nav .nav-right img {
 }
 
 dialog {
-  background: rgb(243, 176, 243);
+  background: rgb(207, 205, 189);
   width: 40%;
   padding: 0;
   border-radius: 10px;
@@ -305,14 +388,30 @@ dialog .btn-add2 button {
   outline: none;
 }
 dialog .btn-add2 button:nth-child(1):hover {
-  background: purple;
+  background: rgb(239, 35, 69);
   color: white;
 }
 dialog .btn-add2 button:nth-child(2) {
-  background: purple;
+  background: rgb(239, 35, 69);
   color: white;
 }
 dialog .btn-add2 button:nth-child(2):hover {
   background: white;
   color: black;
+}
+
+footer {
+  margin-top: 3%;
+  background: rgba(0, 0, 0, 0.227);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .footer-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

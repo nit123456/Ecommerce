@@ -10,7 +10,7 @@
 
 }
 dialog{
-    background:  rgb(243, 176, 243);
+    background:  $color1;
     width: 40%;
     padding: 0;
     border-radius: 10px;
@@ -60,11 +60,11 @@ dialog{
             border-radius: 10px;
             outline: none;
             &:nth-child(1):hover{
-                background: purple;
+                background: $color2;
                 color: white;
             }
             &:nth-child(2){
-                background: purple;
+                background: $color2;
                 color: white;
                 &:hover{
                     background: white;

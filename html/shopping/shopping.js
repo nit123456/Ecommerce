@@ -1,23 +1,24 @@
 // -------------------------------Create Product--------------------------
 // _________CONTANT___________
 const classProduct= document.querySelector(".product");
+const containerDetail= document.querySelector(".container-detail");
 
 // __________Create Variable___________
-let product=[{img:"https://spng.pngfind.com/pngs/s/592-5924959_1680d-laptop-backpack-backpack-hd-png-download.png",
+let product=[{img:"../../pic/nicksneakers.png",
               name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$",},
-            {img:"https://www.pngfind.com/pngs/m/541-5412120_college-bag-hawlander-backpack-hd-png-download.png",
+            {img:"../../pic/nicshoe.png",
               name:"Chanel",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
             {img:"https://freepngimg.com/thumb/women_shoes/3-2-women-shoes-free-download-png.png",
               name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
-            {img:"https://www.freepnglogos.com/uploads/shoes-png/download-nike-shoes-transparent-png-for-designing-projects-16.png",
+            {img:"https://freepngimg.com/thumb/women_shoes/8-2-women-shoes-png.png",
              name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"},
-             {img:"https://www.freepnglogos.com/uploads/shoes-png/dance-shoes-png-transparent-dance-shoes-images-36.png",
+             {img:"https://www.freepnglogos.com/uploads/shoes-png/download-nike-shoes-transparent-png-for-designing-projects-16.png",
              name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$"},
-           {img:"https://www.pngfind.com/pngs/m/541-5412120_college-bag-hawlander-backpack-hd-png-download.png",
+           {img:"https://freepngimg.com/thumb/shoes/55569-2-sneakers-image-free-png-hq.png",
              name:"Chanel",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
-           {img:"https://www.freepngimg.com/thumb/bag/130700-bag-school-black-download-hd.png",
+           {img:"https://freepngimg.com/thumb/men%20shoes/8-black-men-shoes-png-image.png",
              name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
-           {img:"https://freepngimg.com/thumb/jacket/152511-leather-jacket-biker-png-file-hd.png",
+           {img:"https://freepngimg.com/thumb/shoes/2-2-shoes-png-clipart.png",
             name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"}];
 let cart=[];
 
@@ -88,12 +89,30 @@ let displayProduct=()=>{
     classProduct.appendChild(showProduct);
     
 };
+// ____________________ hide and show__________________
+let hide=(element)=>{
+    element.style.display="none";
+}
+let show=(element)=>{
+    element.style.display="block";
+}
+
 // ___________________Details information__________________
 let detailInfo=(event)=>{
+    show(containerDetail);
     let index =event.target.parentElement.parentElement.parentElement.dataset.index;
     document.querySelector(".img-left img").src=product[index].img;
+    document.querySelector(" #name").textContent=product[index].name;
+    document.querySelector("#price").textContent=product[index].price;
+    document.querySelector("#description").textContent=product[index].description;
+    document.querySelector("#size").textContent=product[index].size;
     
 }
+// _________________Back from detail____________________
+let onBack=()=>{
+    hide(containerDetail);
+}
+document.querySelector("#back").addEventListener("click",onBack);
 // _______________Function add cart_____________
 let addCart=(event)=>{
     let newCart={};
@@ -106,6 +125,8 @@ let addCart=(event)=>{
     cart.push(newCart)
 
     saveCart()
+    let message= newCart.name+" added to your cart!";
+    alert(message);
 
 }
 // _______________Save Product_______________________
@@ -113,7 +134,7 @@ let saveProduct=()=>{
     localStorage.setItem("product", JSON.stringify(product));
     // localStorage.setItem("cart", JSON.stringify(cart));
 }
-
+// ______________Save Cart____________________
 let saveCart=()=>{
     localStorage.setItem("cart", JSON.stringify(cart));
 }
@@ -129,10 +150,7 @@ let reloadProduct=()=>{
     }
 
 };
-// ______________Function Of Product Carted___________________
-let productCarted=()=>{
 
-}
 // ________Variable Const________
 const searchProductInput= document.querySelector("#search");
 const showProduct = document.querySelector(".show-product");

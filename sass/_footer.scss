@@ -1,0 +1,15 @@
+footer{
+    margin-top: 3%;
+    background: rgba(0, 0, 0, 0.227);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .footer-info{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .social{
+        text-align: center;
+    }
+}

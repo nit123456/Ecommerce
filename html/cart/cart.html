@@ -13,7 +13,7 @@
    <div class="container">
         <nav>
             <div class="nav-left">
-                <a href="index.html"><img src="/project pic/logo.png" alt="" width="80px", height="80px"></a>
+                <a href="index.html"><img src="/pic/logo.png" alt="" width="80px", height="80px"></a>
                 
             </div>
             <div class="nav-right">
@@ -23,22 +23,26 @@
                     <a href="/html/cart/cart.html"><li>Cart</li></a>
                     <a href="/html/seller/sell.html"><li>Sell</li></a>
                 </ul>
-                <img src="/project pic/cambodia.png" alt="" width="40px", height="40px">
-                <img src="/project pic/login.png" alt="" width="40px", height="40px">
+                <img src="/pic/cambodia.png" alt="" width="40px", height="40px">
+                <img src="/pic/login.png" alt="" width="40px", height="40px">
             </div>
         </nav>
         <div class="my-cart">
-            <h1>Your cart</h1>
+            
+            <div class="total">
+                <h1>Your cart</h1>
+                <div class="price-item">
+                    <p>Total Price:<span id="total"></span></p>
+                    <p>Item:<span id="item"></span></p>
+                </div>
+            </div>
             <div class="all-cart">
                 <!-- TODO -->
             </div>
         </div>
-        <div class="total">
-            <p></p>
+        <div class="file-empty">
+            <!-- TODO -->
         </div>
-        <div class="add-cart">
-            <button>ADD CART</button>
-        </div>   
     </div>
 </body>
 <script src="/html/cart/cart.js"></script>
