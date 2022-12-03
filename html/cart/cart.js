@@ -1,6 +1,7 @@
 // ----------------------Cart Page----------------------//
 const myCart= document.querySelector(".all-cart");
 const fileEmpty=document.querySelector(".file-empty");
+const checkout= document.querySelector(".form-checkout");
 
 
 // ____________Variables__________________
@@ -89,6 +90,26 @@ let customerCard =()=>{
         fileEmpty.appendChild(text);
     }
 }
+// _____________________Show Checkout_______________________
+let show=(element)=>{
+    element.style.display="block";
+};
+// _______________________Hide Checkout_______________________
+let hide=(element)=>{
+    element.style.display="none";
+};
+let wantToCheckout=()=>{
+    show(checkout);
+};
+let onBack=()=>{
+    hide(checkout);
+};
+let onCheckout=()=>{
+    hide(checkout);
+}
+document.querySelector("#btn-two").addEventListener("click", onBack);
+document.querySelector("#btn-one").addEventListener("click", onCheckout);
+document.querySelector("#checkout").addEventListener("click", wantToCheckout);
 // ________________Function Remove cart______________
 let deleteCart=(event)=>{
     let index=event.target.parentElement.parentElement.parentElement.dataset.index;

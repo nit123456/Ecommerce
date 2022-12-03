@@ -1,8 +1,4 @@
 // ______________________________Card Page______________________________
-// .view-add-cart{
-//     display: flex;
-//     width: 100%;
-// }
 .my-cart{
     // padding:0 20px;
     .total{
@@ -17,6 +13,17 @@
         h1{
             margin-left: 20px;
         }
+        .checkout-price{
+            display: flex;
+            align-items: center;
+            .checkout{
+                margin-right: 20px;
+                button{
+                    padding: 15px;
+                    outline: none;
+                }
+            }
+        }
         p{
             margin-right: 20px;
             span{
@@ -25,13 +32,84 @@
         }
     }
 }
+.form-checkout{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+   top: 0%;
+    dialog{
+        top: 7%;
+        position: absolute;
+        width: 60%;
+        background: none;
+        .billing-payment{
+            display: flex;
+            justify-content: space-around;
+        }
+        input{
+            width: 350px;
+            padding: 10px;
+            outline: none;
+        }
+        .billing-address{
+            background: $color2;
+            color: white;
+            padding: 20px;
+            .icons-address{
+                .label-icon{
+                    margin-top: 15px;
+                }
+            }
+        }
+        .payment{
+            background: $color1;
+            padding: 20px;;
+            .pay{
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+            }
+            .credit{
+                display: flex;
+                i{
+                    font-size: 35px;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .btn-checkout{
+            margin-top: 20px;
+            text-align: end;
+            button{
+                padding: 15px;
+                background: $color2;
+                color: white;
+                border: none;
+                &:hover{
+                    background: white;
+                    color:black;
+                }
+            }
+            #btn-two{
+                background: white;
+                color: black;
+                &:hover{
+                    background: $color2;
+                    color: white;
+                }
+            }
+        }
+    }
+}
 .all-cart{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin-left: 2%;
 }
 .card-cart{
-    width: 49%;
+    width: 48%;
     background:$color1;
     display: flex;
     align-items: center;

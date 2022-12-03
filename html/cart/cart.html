@@ -13,7 +13,7 @@
    <div class="container">
         <nav>
             <div class="nav-left">
-                <a href="index.html"><img src="/pic/logo.png" alt="" width="80px", height="80px"></a>
+                <a href="../home/index.html"><img src="/pic/logo2.png" alt="" width="150px"></a>
                 
             </div>
             <div class="nav-right">
@@ -28,12 +28,16 @@
             </div>
         </nav>
         <div class="my-cart">
-            
             <div class="total">
                 <h1>Your cart</h1>
-                <div class="price-item">
-                    <p>Total Price:<span id="total"></span></p>
-                    <p>Item:<span id="item"></span></p>
+                <div class="checkout-price">
+                    <div class="checkout">
+                        <button id="checkout">Checkout</button>
+                    </div>
+                    <div class="price-item">
+                        <p>Total Price:<span id="total"></span></p>
+                        <p>Item:<span id="item"></span></p>
+                    </div>
                 </div>
             </div>
             <div class="all-cart">
@@ -43,6 +47,125 @@
         <div class="file-empty">
             <!-- TODO -->
         </div>
+        <div class="form-checkout">
+            <dialog open>
+                <div class="billing-payment">
+                    <div class="billing-address">
+                        <h3>Billing Address</h3>
+                        <div class="icons-address">
+                            <div class="label-icon">
+                                <i class="fa fa-user"></i>
+                                <label for="">Full Name</label>
+                            </div>
+                            <input type="text"placeholder="Katrit. Kh">
+                        </div>
+                        <div class="icons-address">
+                            <div class="label-icon">
+                                <i class="fa fa-envelope"></i>
+                                <label for="">Email</label>
+                            </div>
+                            <input type="text"placeholder="katrit@example.com">
+                        </div>
+                        <div class="icons-address">
+                            <div class="label-icon">
+                                <i class="fa fa-address-card-o"></i>
+                                <label for="">Address</label>
+                            </div>
+                            <input type="text"placeholder="542 W. 15th Street">
+                        </div>
+                        <div class="icons-address">
+                            <div class="label-icon">
+                                <i class="fa fa-institution"></i>
+                                <label for="">City</label>
+                            </div>
+                            <input type="text"placeholder="Phnom Penh">
+                        </div>
+                        <div class="icons-address">
+                            <div class="label-icon">
+                                <i class="fa fa-mobile-phone"></i>
+                                <label for="">Phone number</label>
+                            </div>
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <h3>Payment</h3>
+                        <div class="pay">
+                            <label for="">Accepted Cards</label>
+                            <div class="credit">
+                               <i class="fa fa-cc-visa" style="color: rgb(7, 7, 136);"></i>
+                               <i class="fa fa-credit-card-alt" style="color: red;"></i>
+                               <i class="	fa fa-cc-mastercard" style="color: rgb(96, 183, 9);"></i>
+                            </div>
+                        </div>
+                        <div class="pay">
+                            <label for="">Name on Card</label>
+                            <input type="text" placeholder="Katrit Kh">
+                        </div>
+                        <div class="pay">
+                            <label for="">Credit card number</label>
+                            <input type="number" placeholder="3333-2222-1111">
+                        </div>
+                        <div class="pay">
+                            <label for="">Exp Month</label>
+                            <input type="text" placeholder="December">
+                        </div>
+                        <div class="pay">
+                            <label for="">Exp Year</label>
+                            <input type="number" placeholder="2022">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-checkout">
+                    <button id="btn-one">CHECKOUT NOW</button>
+                    <button id="btn-two">BACK</button>
+
+                </div>
+            </dialog>
+        </div>
+        <footer>
+            <div class="footer-info">
+                <div class="logo-left">
+                    <a href="../home/index.html"><img src="/pic/logo2.png" alt=""></a>
+                </div>
+                <div class="address">
+                    <h4>Address</h4>
+                    <p>Street 371 Phum Tropeang Chhuk (Borey Sorla), Sangkat Tek Thla Khan Sen Sok P.O Box 511 Phnom Penh</p>
+                </div>
+                <div class="content">
+                    <h4>All page</h4>
+                    <ul>
+                        <div class="page">
+                            <i class="fa fa-arrow-right"></i>
+                            <a href="/html/home/index.html"><li>Home</li></a>
+                        </div>
+                        <div class="page">
+                            <i class="fa fa-arrow-right"></i>
+                            <a href="/html/shopping/shopping.html"><li>Shopping</li></a>
+                        </div>
+                        <div class="page">
+                            <i class="fa fa-arrow-right"></i>
+                            <a href="/html/cart/cart.html"><li>Cart</li></a>
+                        </div>
+                        <div class="page">
+                            <i class="fa fa-arrow-right"></i>
+                            <a href="/html/seller/sell.html"><li>Sell</li></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <hr>
+                <div class="group-icon">
+                    <i class='fa fa-facebook'></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-wifi"></i>
+                    <i class="fa fa-google-plus"></i>
+                    <i class="fa fa-telegram"></i>
+                </div>
+                <p>nit.noem@student.passerellesnumeriques.org</p>
+            </div>
+        </footer>
     </div>
 </body>
 <script src="/html/cart/cart.js"></script>

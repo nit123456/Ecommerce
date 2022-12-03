@@ -3,6 +3,20 @@
     margin-top: 1%;
     position: relative;
     overflow-x: hidden;
+    .product-condition{
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        select{
+            border: none;
+            outline: none;
+            border-radius:20px;
+            padding: 20px;
+            font-weight: bold;
+            color: $color2;
+            background: transparent;
+        }
+    }
     .search{
         position: absolute;
         width: 100%;

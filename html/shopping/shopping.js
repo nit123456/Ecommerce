@@ -7,19 +7,19 @@ const containerDetail= document.querySelector(".container-detail");
 let product=[{img:"../../pic/nicksneakers.png",
               name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$",},
             {img:"../../pic/nicshoe.png",
-              name:"Chanel",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
+              name:"Chanel",price:40,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
             {img:"https://freepngimg.com/thumb/women_shoes/3-2-women-shoes-free-download-png.png",
-              name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
+              name:"Nike",price:50,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
             {img:"https://freepngimg.com/thumb/women_shoes/8-2-women-shoes-png.png",
-             name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"},
+             name:"BARROW",price:40,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"},
              {img:"https://www.freepnglogos.com/uploads/shoes-png/download-nike-shoes-transparent-png-for-designing-projects-16.png",
-             name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$"},
+             name:"DENY",price:100,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$"},
            {img:"https://freepngimg.com/thumb/shoes/55569-2-sneakers-image-free-png-hq.png",
-             name:"Chanel",price:12403,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
+             name:"Chanel",price:124,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
            {img:"https://freepngimg.com/thumb/men%20shoes/8-black-men-shoes-png-image.png",
-             name:"Nike",price:213,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
+             name:"Nike",price:30,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
            {img:"https://freepngimg.com/thumb/shoes/2-2-shoes-png-clipart.png",
-            name:"BARROW",price:249,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"}];
+            name:"BARROW",price:24,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"}];
 let cart=[];
 
 // ________________Display Product___________________
@@ -87,8 +87,9 @@ let displayProduct=()=>{
         // console.log(showProduct);
     }
     classProduct.appendChild(showProduct);
-    
-};
+    getArrayPrice();
+}
+
 // ____________________ hide and show__________________
 let hide=(element)=>{
     element.style.display="none";

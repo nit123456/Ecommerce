@@ -1,6 +1,6 @@
 footer{
     margin-top: 3%;
-    background: rgba(0, 0, 0, 0.227);
+    background: $color1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,8 +8,43 @@ footer{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        .content{
+            .page{
+                display: flex;
+                i{
+                    margin-right: 20px;
+                }
+            }
+            width: 200px;
+            h4{
+                margin-left:17%;
+            }
+            ul{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+        .address{
+            h4{
+                margin-left: 25%;
+            }
+            width: 250px;
+            // text-align: center;
+        }
     }
     .social{
         text-align: center;
+        hr{
+            width: 80%;
+        }
+        i{
+            font-size: 20px;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 20px;
+        }
     }
 }
