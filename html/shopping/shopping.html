@@ -28,19 +28,20 @@
             </div>
         </nav>
         <div class="bgShoping">
-            <img src="/pic/bg3.png" alt="" width="1345px" height="400px">
+            <img src="/pic/backgr.jpg" alt="" width="1345px" height="400px">
             <div class="product-condition">
-                <select name="" id="select">
-                    <option value="all">All</option>
-                    <option value="$20">$20</option>
-                    <option value="$30">$30</option>
-                    <option value="$40">$40</option>
-                    <option value="$50">$50</option>
-                    <option value="$60">$60</option>
-                    <option value="$70">$70</option>
-                    <option value="$90">$90</option>
-                    <option value="$100">$100</option>
-                    <option value="$200">$200</option>
+                <select name="" id="select" onchange="sortProduct()">
+                    <option disabled>View as</option>
+                    <option value="0">All product</option>
+                    <option value="20">$20</option>
+                    <option value="30">$30</option>
+                    <option value="40">$40</option>
+                    <option value="50">$50</option>
+                    <option value="60">$60</option>
+                    <option value="70">$70</option>
+                    <option value="90">$90</option>
+                    <option value="100">$100</option>
+                    <option value="200">$200</option>
                 </select>
             </div>
             <div class="search">
@@ -76,8 +77,9 @@
                             <span id="price"></span>
                         </div>
                     </div>
-                    <div class="back">
+                    <div class="back-cart">
                         <button id="back">Back</button>
+                        <button id="cart">Cart</button>
                     </div>
                 </div>
             </dialog>

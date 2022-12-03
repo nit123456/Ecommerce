@@ -29,17 +29,31 @@
                 margin-right: 10px;
             }
         }
-        .back{
+        .back-cart{
             text-align: end;
             button{
                 margin-bottom: 20px;
                 padding: 10px;
-                border: none;
                 width: 70px;
                 border-radius: 10px;
+                
+            }
+            #back{
+                border: 1px solid black;
                 &:hover{
                     background: $color2;
                     color: white;
+                    border: none;
+                }
+            }
+            #cart{
+                background: $color2;
+                color: white;
+                border: none;
+                &:hover{
+                    background: white;
+                    color:black;
+                    border: 1px solid black;
                 }
             }
         }

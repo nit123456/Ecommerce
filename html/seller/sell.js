@@ -15,7 +15,7 @@ let show=(element)=>{
     element.style.display="block";
 }
 
-// ________________Show Dialog ADDPRODUCT____________________
+// ________________hide Dialog ADDPRODUCT____________________
 let hide=(element)=>{
     element.style.display="none";
 }
@@ -75,6 +75,15 @@ let addProduct=()=>{
 let cancelProduct=()=>{
     hide(dialogForm);
 }
+// _________________URL validate input from www.freecodecamp.com ___________________
+let validateInputURL=urlString=>{
+    try{
+        return Boolean(new URL(urlString));
+    }
+    catch(e){
+        return false;
+    }
+}
 // _____________Create Product_________________
 let createProduct=()=>{
     hide(dialogForm);
@@ -91,6 +100,9 @@ let createProduct=()=>{
     let booLean=true;
     if (newProduct.name.length>10){
         alert ("Your product name is too long");
+    }
+    if (newProduct.img=="" || !(validateInputURL(newProduct.img))){
+        booLean=false;
     }
     if (newProduct.size=="Chose"){
         alert ("Please select a size");

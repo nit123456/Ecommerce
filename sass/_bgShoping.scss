@@ -5,28 +5,31 @@
     overflow-x: hidden;
     .product-condition{
         position: absolute;
-        top: 40%;
-        left: 20%;
+        top: 30%;
+        left: 22%;
         select{
             border: none;
             outline: none;
-            border-radius:20px;
-            padding: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            padding: 19px;
             font-weight: bold;
-            color: $color2;
-            background: transparent;
+            color: white;
+            background: $color2;
         }
     }
     .search{
         position: absolute;
         width: 100%;
-        top: 40%;
+        top: 30%;
         left: 30%;
         input{
             padding: 20px;
             width: 40%;
             border: none;
-            border-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            outline: none;
         }
         i{  
             position: absolute;

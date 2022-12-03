@@ -13,6 +13,8 @@ nav {
   justify-content: space-between;
   background-color: white;
   box-shadow: 0px 0px 15px gray;
+  position: sticky;
+  top: 0%;
 }
 nav .nav-left img {
   margin-left: 50px;
@@ -46,18 +48,28 @@ nav .nav-right img {
 
 .pic-bg {
   margin-top: 3%;
-  position: relative;
+  display: flex;
+  margin: 6%;
 }
-.pic-bg .bg1-content {
-  position: absolute;
-  top: 20%;
-  left: 50%;
+.pic-bg .left h1 {
+  font-size: 50px;
+  color: rgb(239, 35, 69);
 }
-.pic-bg .bg1-content p {
-  font-size: 70px;
-  line-height: 30px;
-  font-weight: bold;
-  color: #fff;
+.pic-bg .left p {
+  width: 70%;
+}
+.pic-bg .left button {
+  padding: 10px;
+  width: 20%;
+  background: rgb(239, 35, 69);
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+.pic-bg .left button:hover {
+  background: white;
+  border: 1px solid black;
+  color: black;
 }
 
 .product {
@@ -81,6 +93,10 @@ nav .nav-right img {
   padding: 20px;
   width: 18%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.724);
+  transition: 1s;
+}
+.product .show-product .card-product:hover {
+  transform: translateY(-10px);
 }
 .product .show-product .card-product .img {
   display: flex;
@@ -127,29 +143,32 @@ nav .nav-right img {
 }
 .bgShoping .product-condition {
   position: absolute;
-  top: 40%;
-  left: 20%;
+  top: 30%;
+  left: 22%;
 }
 .bgShoping .product-condition select {
   border: none;
   outline: none;
-  border-radius: 20px;
-  padding: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 19px;
   font-weight: bold;
-  color: rgb(239, 35, 69);
-  background: transparent;
+  color: white;
+  background: rgb(239, 35, 69);
 }
 .bgShoping .search {
   position: absolute;
   width: 100%;
-  top: 40%;
+  top: 30%;
   left: 30%;
 }
 .bgShoping .search input {
   padding: 20px;
   width: 40%;
   border: none;
-  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  outline: none;
 }
 .bgShoping .search i {
   position: absolute;
@@ -204,19 +223,32 @@ nav .nav-right img {
 .container-detail dialog .info-right h4 {
   margin-right: 10px;
 }
-.container-detail dialog .back {
+.container-detail dialog .back-cart {
   text-align: end;
 }
-.container-detail dialog .back button {
+.container-detail dialog .back-cart button {
   margin-bottom: 20px;
   padding: 10px;
-  border: none;
   width: 70px;
   border-radius: 10px;
 }
-.container-detail dialog .back button:hover {
+.container-detail dialog .back-cart #back {
+  border: 1px solid black;
+}
+.container-detail dialog .back-cart #back:hover {
   background: rgb(239, 35, 69);
   color: white;
+  border: none;
+}
+.container-detail dialog .back-cart #cart {
+  background: rgb(239, 35, 69);
+  color: white;
+  border: none;
+}
+.container-detail dialog .back-cart #cart:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .my-cart .total {
@@ -543,4 +575,48 @@ footer .social i {
   border: 1px solid black;
   padding: 5px;
   border-radius: 20px;
+}
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.login-page dialog {
+  display: flex;
+  width: 50%;
+  top: 15%;
+}
+.login-page dialog .login-form {
+  margin-top: 20px;
+}
+.login-page dialog .login-form .yourself {
+  display: flex;
+}
+.login-page dialog .login-form .yourself input {
+  padding: 10px;
+  width: 79%;
+}
+.login-page dialog .login-form .infomation {
+  display: flex;
+  flex-direction: column;
+}
+.login-page dialog .login-form .infomation input {
+  width: 90%;
+  padding: 10px;
+}
+.login-page dialog .login-form .button {
+  text-align: center;
+  margin-top: 20px;
+}
+.login-page dialog .login-form .button button {
+  padding: 10px;
+  outline: none;
+}
+.login-page dialog .login-form .button button:nth-child(1) {
+  background: rgb(239, 35, 69);
+  color: white;
 }/*# sourceMappingURL=main.css.map */

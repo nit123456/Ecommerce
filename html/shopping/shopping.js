@@ -2,24 +2,25 @@
 // _________CONTANT___________
 const classProduct= document.querySelector(".product");
 const containerDetail= document.querySelector(".container-detail");
+const select= document.querySelector("#select");
 
 // __________Create Variable___________
-let product=[{img:"../../pic/nicksneakers.png",
-              name:"DENY",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$",},
-            {img:"../../pic/nicshoe.png",
+let product=[{img:"../../pic/shoe2.png",
+              name:"Deny",price:200,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$",},
+            {img:"../../pic/shoegirl3.png",
               name:"Chanel",price:40,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
-            {img:"https://freepngimg.com/thumb/women_shoes/3-2-women-shoes-free-download-png.png",
+            {img:"../../pic/shoe1.png",
               name:"Nike",price:50,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
-            {img:"https://freepngimg.com/thumb/women_shoes/8-2-women-shoes-png.png",
-             name:"BARROW",price:40,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"},
-             {img:"https://www.freepnglogos.com/uploads/shoes-png/download-nike-shoes-transparent-png-for-designing-projects-16.png",
-             name:"DENY",price:100,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$"},
-           {img:"https://freepngimg.com/thumb/shoes/55569-2-sneakers-image-free-png-hq.png",
+            {img:"../../pic/shoegirl1.png",
+             name:"Barrow",price:40,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"},
+             {img:"../../pic/shoegirl2.png",
+             name:"Deny",price:100,description:"quilted leather crossbody bag",star:5,size:"XXXX",currency:"$"},
+           {img:"../../pic/shoegirl4.png",
              name:"Chanel",price:124,description:"2021-2022 Coco top-handle bag",star:5,size:"XXXX",currency:"$"},
-           {img:"https://freepngimg.com/thumb/men%20shoes/8-black-men-shoes-png-image.png",
+           {img:"../../pic/shoeboy2.png",
              name:"Nike",price:30,description:"Dunk Low Retro sneakers",star:5,size:"XXXX",currency:"$"},
-           {img:"https://freepngimg.com/thumb/shoes/2-2-shoes-png-clipart.png",
-            name:"BARROW",price:24,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"}];
+           {img:"../../pic/boygirl1.png",
+            name:"Barrow",price:24,description:"drawstring-hem padded jacket",star:5,size:"XXXX",currency:"$"}];
 let cart=[];
 
 // ________________Display Product___________________
@@ -87,7 +88,6 @@ let displayProduct=()=>{
         // console.log(showProduct);
     }
     classProduct.appendChild(showProduct);
-    getArrayPrice();
 }
 
 // ____________________ hide and show__________________
@@ -130,6 +130,7 @@ let addCart=(event)=>{
     alert(message);
 
 }
+document.querySelector("#cart").addEventListener("click", addCart);
 // _______________Save Product_______________________
 let saveProduct=()=>{
     localStorage.setItem("product", JSON.stringify(product));
@@ -159,8 +160,6 @@ const showProduct = document.querySelector(".show-product");
 // ___________Function for searchProduct__________
 let searchProduct =()=>{
     let nameProduct= searchProductInput.value.toUpperCase();
-    // console.log(nameProduct);
-    
     // _______Loop on all class card-product________
     let allCardProduct = document.querySelectorAll(".card-product");
     for(let i=0;i<allCardProduct.length;i++){
@@ -172,9 +171,22 @@ let searchProduct =()=>{
         }
     }
 }
+// ________________Sort Product___________________
+let sortProduct=()=>{
+    let selectedValue= Number(select.value);
+    let allCardProduct = document.querySelectorAll(".card-product");
+    for(let i=0;i<allCardProduct.length ;i++){
+        let card= allCardProduct[i].lastElementChild.firstElementChild.lastElementChild.textContent.trim();
+        let cardPrice= Number(card.substring(1));
+        if (cardPrice<=selectedValue || cardPrice==0){
+            allCardProduct[i].style.display="";
+        }else{
+            allCardProduct[i].style.display="none";
+        }
+    }
+}
 // _______AddeventListener to searchProductInput____________
 searchProductInput.addEventListener("keyup", searchProduct);
-
-// saveProduct()
+saveProduct()
 reloadProduct()
 displayProduct()
