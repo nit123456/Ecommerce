@@ -29,7 +29,7 @@ let customerCard =()=>{
             let cardCart= document.createElement("div");
             cardCart.dataset.index = index;
             cardCart.className="card-cart";
-
+            console.log(cart.length);
 
             let left= document.createElement("div");
             left.className="left";

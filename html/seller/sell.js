@@ -86,7 +86,7 @@ let validateInputURL=urlString=>{
 }
 // _____________Create Product_________________
 let createProduct=()=>{
-    hide(dialogForm);
+   
     
     let newProduct={};
     newProduct.img= document.querySelector("#img").value;
@@ -96,13 +96,13 @@ let createProduct=()=>{
     newProduct.price=document.querySelector("#price").value;
     newProduct.currency= document.querySelector("#currency").value;
     newProduct.star=5;
-    console.log(newProduct.star);
     let booLean=true;
     if (newProduct.name.length>10){
         alert ("Your product name is too long");
     }
     if (newProduct.img=="" || !(validateInputURL(newProduct.img))){
         booLean=false;
+        alert ("Please fill URL image!");
     }
     if (newProduct.size=="Chose"){
         alert ("Please select a size");
@@ -123,6 +123,7 @@ let createProduct=()=>{
     if(booLean){
         productSeller.push(newProduct);
         saveProduct();
+        hide(dialogForm);
         showProductSeller();
 
     }
