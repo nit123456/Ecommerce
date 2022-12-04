@@ -187,6 +187,6 @@ let sortProduct=()=>{
 }
 // _______AddeventListener to searchProductInput____________
 searchProductInput.addEventListener("keyup", searchProduct);
-// saveProduct()
+saveProduct()
 reloadProduct()
 displayProduct()
