@@ -86,7 +86,6 @@ let validateInputURL=urlString=>{
 }
 // _____________Create Product_________________
 let createProduct=()=>{
-   
     
     let newProduct={};
     newProduct.img= document.querySelector("#img").value;
